@@ -114,7 +114,7 @@
         }
 
         // 6 convert to upper case to match my array
-        userChoice = userChoice.toUpperCase; 
+        userChoice = userChoice.toUpperCase(); 
 
         //I want to get a random selection from my array
         var index = Math.floor(Math.random()* options.length);
@@ -122,24 +122,24 @@
 
         window.alert("The Computer chose" + computerChoice)
 
-        if(userChoice === computerChoice){
+        if (userChoice === computerChoice) {
             ties++;
-            window.alert("Ites a tie!!")
+            window.alert("Ites a tie!!");
         } else if (
-            (userChoice === "R" && computerChoice === "S") ||
-            (userChoice === "P" && computerChoice === "R") ||
+            (userChoice === "R" && computerChoice === "S") || 
+            (userChoice === "P" && computerChoice === "R") || 
             (userChoice === "S" && computerChoice === "P")
-        ) {
+            ) {
             wins++;
-            window.alert("You Win!")
+            window.alert("You Win!");
         } else {
             losses++;
-            window.alert("You lost!")
+            window.alert("You lost!");
         }
-        window.alert("Stats:\nWins:" + wins) //finish
+        window.alert("Stats: \nwins:" + wins + "Stats: \nlosses" + losses + "Stats: \nties" + ties);
 
-        var playAgain = window.confirm("Play again?")
-        if(playagain){
+        var playAgain = window.confirm("Play again?");
+        if(playAgain){
             playGame();
         }
     };
